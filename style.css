@@ -447,7 +447,7 @@ section {
 
 /* ===== SECTION COUPLE ===== */
 #couple {
-  background: url("texture1.jpg") no-repeat center center/cover;
+  background: url("bgpengantin.mp4") no-repeat center center/cover;
   background-color: rgba(255,255,255,0.5); /* putih transparan di atas bg */
   min-height: 150vh;
   display: flex;
