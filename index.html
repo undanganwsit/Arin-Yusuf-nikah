@@ -88,7 +88,7 @@
       <p class="acara-detail">
         Pukul 07:00 WIB - Selesai <br>
         Bertempat di kediaman mempelai wanita<br>
-        Kradenan Gg 8, Pekalongan Selatan
+        Kradenan Gg 8 RT 1 RW 7, Kel. Buaran Kradenan kec. Pekalongan Selatan
       </p>
     </div>
 
@@ -169,27 +169,14 @@
   <div class="hadiah-top">
     <img src="gift.png" alt="Kado Fisik" class="hadiah-logo">
     <span class="hadiah-number" id="alamat-kado">Kirim Kado</span>
-    <button class="copy-btn" onclick="copyText('Kradenan Gg 8, Pekalongan Selatan')">Copy</button>
+    <button class="copy-btn" onclick="copyText('Kradenan Gg 8 RT 1 RW 7, Kel. Buaran Kradenan kec. Pekalongan Selatan')">Copy</button>
   </div>
-  <div class="hadiah-bottom">Kradenan Gg 8, Pekalongan Selatan</div>
+  <div class="hadiah-bottom">Kradenan Gg 8 RT 1 RW 7, Kel. Buaran Kradenan kec. Pekalongan Selatan</div>
 </div>
 
 <br><br><br>
   <!-- Bagian Ucapan & Maps -->
   <div class="ucapan-wrapper">
-    <h2 class="ucapan-maps-title reveal">Ucapan & Doa</h2>
-    <p class="ucapan-maps-subtitle reveal">
-      Dengan penuh rasa syukur, kami berharap doa restu dari Bapak/Ibu/Saudara/i 
-      sekalian untuk kebahagiaan pernikahan kami.
-    </p>
-
-    <!-- Form Ucapan -->
-    <div class="ucapan-maps-form reveal">
-      <textarea id="ucapanText" rows="4" placeholder="Tulis ucapan terbaikmu..."></textarea>
-      <br>
-      <button class="ucapan-maps-btn" onclick="kirimUcapan()">Kirim via WhatsApp</button>
-    </div>
-<br><br>
     <!-- Maps -->
     <div class="ucapan-maps-location reveal">
       <h3 class="ucapan-maps-location-title">Lokasi Acara</h3>
@@ -203,7 +190,47 @@
               class="ucapan-maps-btn">
         📍 Lihat di Google Maps
       </button>
-    </div>
+    </div><br><br>
+
+    <!-- Form Ucapan -->
+    <h2 class="ucapan-maps-title reveal">Ucapan & Doa</h2>
+    <p class="ucapan-maps-subtitle reveal">
+      Dengan penuh rasa syukur, kami berharap doa restu dari Bapak/Ibu/Saudara/i 
+      sekalian untuk kebahagiaan pernikahan kami.
+    </p>
+
+<!-- === SECTION RSVP === -->
+<div class="ucapan-maps-form reveal">
+  <form id="rsvpForm">
+    <input type="text" id="nama" name="nama" placeholder="Nama Kamu" required>
+    <textarea id="ucapanText" name="ucapanText" rows="4" placeholder="Tulis ucapan terbaikmu..." required></textarea>
+    <select id="kehadiran" name="kehadiran" required>
+      <option value="">-- Pilih Kehadiran --</option>
+      <option value="Hadir">Hadir</option>
+      <option value="Tidak Hadir">Tidak Hadir</option>
+    </select>
+
+    <button type="submit" class="ucapan-maps-btn">Kirim</button>
+  </form>
+</div><br><br><br>
+
+<!-- === SECTION LIST UCAPAN === -->
+<div id="listUcapan" class="ucapan-list reveal">
+  <h3 class="ucapan-maps-table reveal">Daftar Ucapan & Kehadiran</h3>
+  <table id="ucapanTable" class="reveal">
+    <thead>
+      <tr>
+        <th>Nama</th>
+        <th>Ucapan</th>
+        <th>Kehadiran</th>
+      </tr>
+    </thead>
+    <tbody id="ucapanBody">
+      <!-- Data dari Google Sheets masuk ke sini -->
+    </tbody>
+  </table>
+</div>
+
   </div>
 </section>
 
@@ -258,7 +285,7 @@
 
   <!-- Musik -->
   <audio id="bg-music" loop>
-    <source src="bergemasampaiselamanya.m4a" type="audio/mpeg">
+    <source src="pernikahankita.m4a" type="audio/mpeg">
     Browser kamu tidak mendukung audio.
   </audio>
   <script src="script.js"></script>

@@ -28,18 +28,6 @@
     revealObserver.observe(document.getElementById("opening"));
   }
 
-   /* === SECTION UCAPAN & MAPS === */
-  function kirimUcapan() {
-    let ucapan = document.getElementById("ucapanText").value.trim();
-    if (ucapan === "") {
-      alert("Tulis ucapan terlebih dahulu 😊");
-      return;
-    }
-    let nomor = "6282338804175"; // nomor WA (pakai kode negara 62)
-    let url = "https://wa.me/" + nomor + "?text=" + encodeURIComponent(ucapan);
-    window.open(url, "_blank");
-  }
-
   /* === COUNTDOWN === */
   const countdownEl = document.getElementById("countdown");
   const weddingDate = new Date("2025-12-25 09:00:00").getTime(); 
@@ -112,3 +100,51 @@ function saveToCalendar() {
   reveals.forEach(el => {
     revealObserver.observe(el);
   });
+
+  
+
+document.getElementById("rsvpForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  let formData = new FormData(this);
+
+  fetch("https://script.google.com/macros/s/AKfycbzi3sbHzkfLYI1lraAJGMh0oLO-_XDua3sIWChHD-HBD0KwCbnrpR1gt9A8iRNywnNbLQ/exec", {
+    method: "POST",
+    body: formData
+  })
+  .then(res => res.text())
+  .then(data => {
+    alert("Terima kasih, data berhasil disimpan 🙏");
+    window.location.href = "index.html"; // balik ke halaman utama
+  })
+  .catch(err => console.error(err));
+});
+
+
+
+const GET_URL = "https://script.google.com/macros/s/AKfycbzi3sbHzkfLYI1lraAJGMh0oLO-_XDua3sIWChHD-HBD0KwCbnrpR1gt9A8iRNywnNbLQ/exec"; // ganti dengan URL GET Apps Script kamu
+const ucapanBody = document.getElementById("ucapanBody");
+
+function loadUcapan() {
+  fetch(GET_URL)
+    .then(res => res.json())
+    .then(data => {
+      ucapanBody.innerHTML = ""; // reset dulu
+      data.reverse().forEach(item => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+          <td>${item.nama}</td>
+          <td>${item.ucapan}</td>
+          <td class="ucapan-kehadiran ${item.kehadiran === "Hadir" ? "hadir" : "tidakhadir"}">
+            ${item.kehadiran}
+          </td>
+        `;
+        ucapanBody.appendChild(row);
+      });
+    })
+    .catch(err => console.error(err));
+}
+
+// otomatis load pas halaman dibuka
+document.addEventListener("DOMContentLoaded", loadUcapan);
+

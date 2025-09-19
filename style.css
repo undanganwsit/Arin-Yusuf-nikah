@@ -647,6 +647,86 @@ section {
   outline: none;
 }
 
+.ucapan-maps-form {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+}
+
+.ucapan-maps-form label {
+  display: block;
+  margin: 10px 0 5px;
+  font-size: 14px;
+  color: #f9f9f9;
+}
+
+.ucapan-maps-form input,
+.ucapan-maps-form select,
+.ucapan-maps-form textarea {
+  width: 100%;
+  border: 1.5px solid #fff;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 14px;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 12px;
+  background: #fff;
+  color: #333;
+  box-sizing: border-box;
+}
+
+.ucapan-maps-form input:focus,
+.ucapan-maps-form select:focus,
+.ucapan-maps-form textarea:focus {
+  border-color: #9cc095;
+  outline: none;
+}
+
+
+
+.ucapan-list {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  background: #f9f9f9;
+  overflow-x: auto;
+}
+
+#ucapanTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#ucapanTable th, 
+#ucapanTable td {
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  text-align: left;
+}
+
+#ucapanTable th {
+  background: #b1d4aa;
+  color: #fff;
+}
+
+.ucapan-kehadiran.hadir {
+  color: green;
+  font-weight: bold;
+}
+
+.ucapan-kehadiran.tidakhadir {
+  color: red;
+  font-weight: bold;
+}
+
+.ucapan-maps-table {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
 .ucapan-maps-btn {
   margin-top: 15px;
   padding: 10px 22px;
