@@ -693,6 +693,21 @@ section {
   overflow-x: auto;
 }
 
+/* Batas tinggi tbody supaya maksimal 3 baris kelihatan */
+#ucapanBody {
+  display: block;
+  max-height: 200px; /* sesuaikan tingginya sampai kira2 3 baris */
+  overflow-y: auto;
+}
+
+/* Supaya header tetap rapi */
+#ucapanTable thead,
+#ucapanTable tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
 #ucapanTable {
   width: 100%;
   border-collapse: collapse;
