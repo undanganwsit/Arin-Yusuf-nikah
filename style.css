@@ -592,7 +592,7 @@ section {
   text-align: center;
   overflow: hidden;
   isolation: isolate;
-  min-height: 230vh; /* ⬅️ 2 kali tinggi layar */
+  min-height: 250vh; /* ⬅️ 2 kali tinggi layar */
 }
 
 #hadiah-ucapan::before {
@@ -925,7 +925,7 @@ section {
 
 .penutup-text {
   font-family: 'Playfair Display', serif;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.8;
   margin-bottom: 20px;
   color: #333;
@@ -933,7 +933,7 @@ section {
 
 .penutup-nama {
   font-family: 'Great Vibes', cursive;
-  font-size: 36px;
+  font-size: 48px;
   color: #c92434; /* bisa disesuaikan warnanya */
 }
 
