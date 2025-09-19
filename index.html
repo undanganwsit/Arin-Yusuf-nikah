@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Wedding Invitation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -25,10 +26,10 @@
 
 <!-- ===== NAVIGASI + MUSIK ===== -->
 <div class="nav">
-  <a href="#wedding-intro"><button>🏠</button></a>
-  <a href="#acara"><button>📅</button></a>
-  <a href="#hadiah-ucapan"><button>💌</button></a>
-  <button id="music-btn" onclick="toggleMusic()">🎵</button>
+<a href="#wedding-intro"><button><i class="fas fa-home"></i></button></a>
+<a href="#acara"><button><i class="fas fa-calendar-alt"></i></button></a>
+<a href="#hadiah-ucapan"><button><i class="fas fa-envelope"></i></button></a>
+<button id="music-btn" onclick="toggleMusic()"><i class="fas fa-music"></i></button>
 </div>
 
 <!-- ===== OPENING ===== -->
@@ -88,8 +89,12 @@
       <p class="acara-detail">
         Pukul 07:00 WIB - Selesai <br>
         Bertempat di kediaman mempelai wanita<br>
-        Kradenan Gg 8 RT 1 RW 7, Kel. Buaran Kradenan kec. Pekalongan Selatan
+        Kradenan Gg 8 RT 1 RW 7, Kel. Buaran Kradenan <br>
+        kec. Pekalongan Selatan
       </p>
+        <button onclick="window.open('https://maps.app.goo.gl/sMzyp5eL8UWhtEWs6','_blank')" 
+          class="resepsi-maps-btn reveal"> 📍 Lihat di Google Maps
+        </button>
     </div>
 
     <!-- Resepsi Pernikahan -->
@@ -100,6 +105,9 @@
         Pukul 10:00 WIB - 13.00 WIB <br>
         Aula Viva Sapugarut
       </p>
+        <button onclick="window.open('https://maps.app.goo.gl/SudKTfmu81KAoeNU7','_blank')" 
+          class="resepsi-maps-btn reveal"> 📍 Lihat di Google Maps
+        </button>
     </div>
   </div>
 </section>
@@ -111,7 +119,7 @@
     <!-- Card mempelai wanita -->
     <div class="couple-card reveal">
       <div class="photo-frame reveal">
-        <img src="jihan.png" alt="Bride">
+        <img src="istri.png" alt="Bride">
       </div>
       <h1 class="couple-name reveal">Jauharin Ni'ma</h1>
       <p class="couple-message reveal">
@@ -122,7 +130,7 @@
     <!-- Card mempelai pria -->
     <div class="couple-card reveal">
       <div class="photo-frame reveal">
-        <img src="yusuf.png" alt="Groom">
+        <img src="suami.png" alt="Groom">
       </div>
       <h1 class="couple-name reveal">Moh. Yusuf</h1>
       <p class="couple-message reveal">
@@ -130,6 +138,30 @@
       </p>
     </div>
 
+  </div>
+</section>
+
+<!-- ===== SECTION LOVE STORY ===== -->
+<section id="love-story" class="reveal">
+      <div class="flower-fall">
+    <!-- bikin banyak bunga -->
+     <span><img src="bunga1.png"></span>
+     <span><img src="bunga2.png"></span>
+     <span><img src="bunga3.png"></span>
+     <span><img src="bunga1.png"></span>
+     <span><img src="bunga2.png"></span>
+     <span><img src="bunga3.png"></span>
+  </div>
+  <div class="love-story-frame reveal">
+    <h2 class="love-story-title reveal">Love Story</h2>
+    <p class="love-story-text reveal">
+      Pertemuan pertama kami terjadi di kampus, saat itu hanya sebatas teman biasa. 
+      Namun seiring berjalannya waktu, komunikasi dan kebersamaan membuat kami semakin dekat. 
+      Dari situlah cerita indah ini bermula, hingga akhirnya kami memutuskan untuk melangkah ke jenjang pernikahan.
+    </p>
+  </div>
+  <div class="love-story-bottom">
+    <img src="bunga.png" alt="bunga hiasan">
   </div>
 </section>
 
@@ -174,23 +206,7 @@
   <div class="hadiah-bottom">Kradenan Gg 8 RT 1 RW 7, Kel. Buaran Kradenan kec. Pekalongan Selatan</div>
 </div>
 
-<br><br><br>
-  <!-- Bagian Ucapan & Maps -->
-  <div class="ucapan-wrapper">
-    <!-- Maps -->
-    <div class="ucapan-maps-location reveal">
-      <h3 class="ucapan-maps-location-title">Lokasi Acara</h3>
-      <iframe 
-        src="https://www.google.com/maps?q=-7.803249,110.364678&hl=es;z=14&output=embed" 
-        allowfullscreen 
-        loading="lazy">
-      </iframe>
-      <br>
-      <button onclick="window.open('https://maps.app.goo.gl/SudKTfmu81KAoeNU7','_blank')" 
-              class="ucapan-maps-btn">
-        📍 Lihat di Google Maps
-      </button>
-    </div><br><br><br><br>
+<br><br>
 
     <!-- Form Ucapan -->
     <h2 class="ucapan-maps-title reveal">Ucapan & Doa</h2>
@@ -217,25 +233,30 @@
 <!-- === SECTION LIST UCAPAN === -->
 <div id="listUcapan" class="ucapan-list reveal">
   <h3 class="ucapan-maps-table reveal">Daftar Ucapan & Kehadiran</h3>
-  <table id="ucapanTable" class="reveal">
-    <thead>
-      <tr>
-        <th>Nama</th>
-        <th>Ucapan</th>
-        <th>Kehadiran</th>
-      </tr>
-    </thead>
-    <tbody id="ucapanBody">
-      <!-- Data dari Google Sheets masuk ke sini -->
-    </tbody>
-  </table>
-</div>
+<table id="ucapanTable" class="reveal">
+  <thead>
+    <tr>
+      <th>Nama</th>
+      <th>Ucapan</th>
+      <th>Kehadiran</th>
+    </tr>
+  </thead>
+  <tbody id="ucapanBody">
+    <!-- Data dari Google Sheets masuk ke sini -->
+  </tbody>
+</table>
 
+
+    <!-- Tambahan bagian total -->
+  <div id="ucapanSummary" class="ucapan-summary">
+    <p>Jumlah Hadir: <span id="jumlahHadir">0</span></p>
+    <p>Jumlah Tidak Hadir: <span id="jumlahTidakHadir">0</span></p>
   </div>
+</div>
 </section>
 
-<!-- ===== SECTION LOVE STORY ===== -->
-<section id="love-story" class="reveal">
+<!-- ===== SECTION PENUTUP ===== -->
+<section id="penutup" class="reveal">
       <div class="flower-fall">
     <!-- bikin banyak bunga -->
      <span><img src="bunga1.png"></span>
@@ -245,17 +266,16 @@
      <span><img src="bunga2.png"></span>
      <span><img src="bunga3.png"></span>
   </div>
-  <div class="love-story-frame reveal">
-    <h2 class="love-story-title reveal">Love Story</h2>
-    <p class="love-story-text reveal">
-      Pertemuan pertama kami terjadi di kampus, saat itu hanya sebatas teman biasa. 
-      Namun seiring berjalannya waktu, komunikasi dan kebersamaan membuat kami semakin dekat. 
-      Dari situlah cerita indah ini bermula, hingga akhirnya kami memutuskan untuk melangkah ke jenjang pernikahan.
+  <div class="penutup-overlay reveal">
+    <div class="penutup-frame reveal">
+      <img src="istri.png" alt="Foto Penutup" />
+    </div>
+    <p class="penutup-text reveal">
+      Merupakan suatu kehormatan dan kebahagiaan bagi kami, apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.
+      <br> Atas kehadiran dan doa restunya, kami mengucapkan terima kasih.
     </p>
+    <p class="penutup-nama reveal">Arin & Yusuf</p>
   </div>
-  <div class="love-story-bottom reveal">
-   <img src="bunga.png" alt="bunga hiasan">
-</div>
 </section>
 
 <!-- ===== FOOTER ===== -->

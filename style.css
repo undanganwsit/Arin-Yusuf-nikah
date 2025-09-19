@@ -55,7 +55,7 @@
     .content p { font-size: 18px; line-height: 1.6; margin-bottom: 25px; max-width: 90%; margin-left: auto; margin-right: auto; }
 
     .btn {
-      background: #b1d4aa;
+      background: #c92434;
       color: white;
       padding: 14px 32px;
       border: none;
@@ -68,7 +68,7 @@
       align-items: center;
       gap: 8px;
     }
-    .btn:hover { background: #9cc095; }
+    .btn:hover { background: #812121; }
 /* ===== OPENING STYLE ===== */
 #opening {
   position: relative;
@@ -114,7 +114,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: #b1d4aa;
+  color: #c92434;
   z-index: 2;
 }
 
@@ -141,7 +141,7 @@
 .name {
   font-family: 'Great Vibes', cursive;
   font-size: 48px;
-  color: #85a57a;           /* warna hijau lembut */
+  color: #c92434;           /* warna hijau lembut */
 }
 
 .and {
@@ -181,8 +181,8 @@
     /* Countdown */
     .countdown { display: flex; gap: 15px; margin: 20px 0; }
     .countdown div {
-      background: #fff; /* warna #b1d4aa tapi transparan */
-      color: #b1d4aa;                          /* biar teks tetap jelas */
+      background: #fff; /* warna #c92434 tapi transparan */
+      color: #c92434;                          /* biar teks tetap jelas */
       padding: 10px 15px;
       border-radius: 10px;
       font-size: 18px;
@@ -192,7 +192,7 @@
     /* Button */
     .btn-main {
       background: #fff;
-      color: #b1d4aa;
+      color: #c92434;
       padding: 12px 24px;
       border: none;
       border-radius: 25px;
@@ -201,11 +201,9 @@
       margin-top: 15px;
     }
 .btn-main:hover {
-  background: #9cc095;
+  background: #812121;
   color: #fff; /* teks jadi putih saat hover */
 }
-
-
 
     /* Navigasi bawah */
 .nav {
@@ -223,7 +221,7 @@
       height: 50px;
       border-radius: 50%;
       border: none;
-      background: #b1d4aa;
+      background: #c92434;
       color: white;
       font-size: 22px;
       cursor: pointer;
@@ -232,13 +230,13 @@
     }
 
     .nav button:hover {
-      background: #9cc095;
+      background: #812121;
     }
 
 /* ===== SECTION UCAPAN ===== */
 #wedding-intro {
   position: relative;
-  background: #b1d4aa;       /* warna dasar */
+  background: #c92434;       /* warna dasar */
   color: #fff;
   padding: 60px 45px;
   text-align: center;
@@ -252,7 +250,7 @@
   position: absolute;
   inset: 0;
   background: url("texture4.png") center/cover no-repeat;
-  opacity: 0.5;             /* atur transparansi tekstur */
+  opacity: 1;             /* atur transparansi tekstur */
   z-index: 0;
 }
 
@@ -314,7 +312,7 @@
 
 /* Card dengan frame setengah lingkaran */
 .acara-card {
-  background: #b1d4aa;
+  background: #c92434;
   margin: 30px 0;
   padding: 30px 20px;
   box-shadow: 0 6px 15px rgba(0,0,0,0.15);
@@ -329,12 +327,12 @@
 
 /* Untuk Akad: atas melengkung */
 .acara-akad {
-  border-radius: 50% 50% 0 0 / 40% 40% 0 0; /* bikin oval di atas */
+  border-radius: 50% 50% 0 0 / 50% 50% 0 0; /* bikin oval di atas */
 }
 
 /* Untuk Resepsi: bawah melengkung */
 .acara-resepsi {
-  border-radius: 0 0 50% 50% / 0 0 40% 40%; /* bikin oval di bawah */
+  border-radius: 0 0 50% 50% / 0 0 50% 50%; /* bikin oval di bawah */
 }
 
 /* Title */
@@ -359,6 +357,27 @@
   line-height: 1.6;
   color: #fff;
 }
+
+.resepsi-maps-btn {
+  background: #fff;
+  color: #c92434;
+  border: none;
+  padding: 10px 20px;
+ border-radius: 9999px;
+  font-size: 14px;
+  cursor: pointer;
+  display: inline-block;
+  width: auto;           /* biar ngikutin konten */
+  max-width: 90%;        /* biar responsif */
+  margin: 15px auto 0;   /* auto center */
+}
+
+.resepsi-maps-btn:hover {
+  background: #812121;
+  color: #fff;   /* ganti warna teks pas hover */
+}
+
+
 /* Buat semua section default tetap 100vh */
 section {
   height: 100vh;
@@ -428,7 +447,7 @@ section {
 
 /* ===== SECTION COUPLE ===== */
 #couple {
-  background: url("9849.jpg") no-repeat center center/cover;
+  background: url("texture4.png") no-repeat center center/cover;
   background-color: rgba(255,255,255,0.5); /* putih transparan di atas bg */
   min-height: 150vh;
   display: flex;
@@ -436,18 +455,18 @@ section {
   justify-content: center;
   text-align: center;
   padding: 40px 20px;
-  color: #9cc095;
+  color: #812121;
 }
 
 .couple-card {
-  background: rgba(255, 255, 255, 0.85); /* putih elegan */
+  background: rgba(255, 255, 255, 1); /* putih elegan */
   border-radius: 20px;
   padding: 30px 20px;
   margin: 20px auto;
   max-width: 450px;
   text-align: center;
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-  border: 2px solid #b1d4aa; /* frame hijau muda */
+  border: 2px solid #ffffff; /* frame hijau muda */
 }
 
 .couple-slider {
@@ -474,8 +493,8 @@ section {
   margin: 0 auto 20px auto;
   border-radius: 50% / 40%; /* bikin oval */
   overflow: hidden;
-  border: 3px solid #9cc095;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  border: 2px solid #ffffff; /* frame hijau muda */
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
 }
 
 .photo-frame img {
@@ -487,7 +506,7 @@ section {
 .couple-name {
   font-family: 'Great Vibes', cursive;
   font-size: 36px;
-  color: #9cc095;
+  color: #c92434;
   margin-bottom: 10px;
 }
 
@@ -497,23 +516,91 @@ section {
   line-height: 1.6;
 }
 
+
+/* ===== SECTION LOVE STORY ===== */
+#love-story {
+  position: relative;
+  background: url("10662.jpg") no-repeat center center/cover;
+  background-color: rgba(255,255,255,0.5); /* putih transparan di atas bg */
+  background-blend-mode: overlay; /* bisa coba lighten, multiply, soft-light */
+  padding: 60px 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+
+/* Frame setengah lingkaran atas */
+.love-story-frame {
+  background: #c92434;
+  margin: 30px 0;
+  padding: 30px 20px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  position: relative;
+  overflow: hidden;
+
+  height: 350px; /* sedikit lebih tinggi biar muat teks */
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  border-radius: 50% 50% 0 0 / 40% 40% 0 0; /* lengkung atas */
+}
+
+/* Title */
+.love-story-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 32px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+/* Isi cerita */
+.love-story-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #fff;
+  padding: 0 10px;
+}
+
+#love-story {
+  position: relative;
+  z-index: 20; /* pastikan lebih tinggi dari section berikut */
+}
+
+.love-story-bottom {
+  position: absolute;
+  bottom: -60px; /* keluar dari section love story */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.love-story-bottom img {
+  max-width: 600px;
+  height: auto;
+  display: block;
+}
+
 /* ===== SECTION HADIAH + UCAPAN ===== */
 #hadiah-ucapan {
   position: relative;
-  background: #b1d4aa;
+  background: #c92434;
   padding: 60px 20px 120px;
   text-align: center;
   overflow: hidden;
   isolation: isolate;
-  min-height: 300vh; /* ⬅️ 2 kali tinggi layar */
+  min-height: 230vh; /* ⬅️ 2 kali tinggi layar */
 }
 
 #hadiah-ucapan::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: url("texture4.png") center/cover no-repeat;
-  opacity: 0.5;
+  background: url("texture5.png") center/cover no-repeat;
+  opacity: 1;
   z-index: -1;
 }
 
@@ -587,14 +674,14 @@ section {
   padding: 6px 14px;
   border: none;
   border-radius: 8px;
-  background: #b1d4aa; 
+  background: #c92434; 
   color: #fff;
   font-size: 14px;
   cursor: pointer;
   transition: background 0.3s;
 }
 .copy-btn:hover {
-  background: #9cc095;
+  background: #812121;
 }
 .hadiah-bottom {
   margin-top: 10px;
@@ -643,7 +730,7 @@ section {
 }
 
 .ucapan-maps-form textarea:focus {
-  border-color: #9cc095;
+  border-color: #812121;
   outline: none;
 }
 
@@ -679,7 +766,7 @@ section {
 .ucapan-maps-form input:focus,
 .ucapan-maps-form select:focus,
 .ucapan-maps-form textarea:focus {
-  border-color: #9cc095;
+  border-color: #812121;
   outline: none;
 }
 
@@ -696,43 +783,54 @@ section {
 /* Batas tinggi tbody supaya maksimal 3 baris kelihatan */
 #ucapanBody {
   display: block;
-  max-height: 200px; /* sesuaikan tingginya sampai kira2 3 baris */
+  max-height: 400px; /* sesuaikan tingginya sampai kira2 3 baris */
   overflow-y: auto;
 }
 
-/* Supaya header tetap rapi */
-#ucapanTable thead,
-#ucapanTable tbody tr {
-  display: table;
-  width: 100%;
-  table-layout: fixed;
+/* Hapus tampilan tabel default */
+#ucapanTable thead {
+  display: none; /* header tabel disembunyikan */
 }
 
 #ucapanTable {
+  display: block;
   width: 100%;
-  border-collapse: collapse;
+  border: none;
 }
 
-#ucapanTable th, 
-#ucapanTable td {
-  border: 1px solid #ddd;
-  padding: 8px 12px;
-  text-align: left;
+/* Style item ucapan */
+.ucapan-item {
+  border-bottom: 1px solid #ddd;
+  padding: 12px 8px;
 }
 
-#ucapanTable th {
-  background: #b1d4aa;
-  color: #fff;
+.ucapan-header {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.ucapan-kehadiran {
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .ucapan-kehadiran.hadir {
-  color: green;
-  font-weight: bold;
+  color: #2c9c4a; /* hijau */
 }
 
 .ucapan-kehadiran.tidakhadir {
-  color: red;
-  font-weight: bold;
+  color: #c92434; /* merah */
+}
+
+.ucapan-teks {
+  font-size: 14px;
+  color: #555;
+  text-align: left;     /* biar rata kiri */
+  vertical-align: top;  /* posisinya dari atas sel */
 }
 
 .ucapan-maps-table {
@@ -742,20 +840,33 @@ section {
   color: #555;
 }
 
+.ucapan-summary {
+  margin-top: 15px;
+  padding: 10px;
+  font-size: 15px;
+  color: #333;
+}
+
+.ucapan-summary p {
+  margin: 5px 0;
+  font-weight: 600;
+}
+
+
 .ucapan-maps-btn {
   margin-top: 15px;
   padding: 10px 22px;
   border: none;
   border-radius: 6px;
   background: #fff;
-  color: #b1d4aa;
+  color: #c92434;
   font-size: 14px;
   font-family: 'Playfair Display', serif;
   cursor: pointer;
   transition: background 0.3s, color 0.3s;
 }
 .ucapan-maps-btn:hover {
-  background: #9cc095;
+  background: #812121;
   color: #fff;
 }
 
@@ -772,77 +883,64 @@ section {
 .ucapan-maps-location iframe {
   border-radius: 10px;
   border: 2px solid #fff;
-  max-width: 100%;
+  width: 600px;
   height: 300px;
   background: #fff;
 }
 
-/* ===== SECTION LOVE STORY ===== */
-#love-story {
+
+/* ===== SECTION PENUTUP ===== */
+#penutup {
   position: relative;
-  background: url("10662.jpg") no-repeat center center/cover;
-  background-color: rgba(255,255,255,0.5); /* putih transparan di atas bg */
-  background-blend-mode: overlay; /* bisa coba lighten, multiply, soft-light */
-  padding: 60px 20px;
-  text-align: center;
+  background: url("bgpenutup.jpg") no-repeat center center/cover;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-}
-
-
-/* Frame setengah lingkaran atas */
-.love-story-frame {
-  background: #b1d4aa;
-  margin: 30px 0;
-  padding: 30px 20px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-  position: relative;
-  overflow: hidden;
-
-  height: 350px; /* sedikit lebih tinggi biar muat teks */
-  max-width: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  border-radius: 50% 50% 0 0 / 40% 40% 0 0; /* lengkung atas */
-}
-
-/* Title */
-.love-story-title {
-  font-family: 'Great Vibes', cursive;
-  font-size: 32px;
-  color: #fff;
-  margin-bottom: 15px;
-}
-
-/* Isi cerita */
-.love-story-text {
-  font-size: 14px;
-  line-height: 1.6;
-  color: #fff;
-  padding: 0 10px;
-}
-
-.love-story-bottom {
   text-align: center;
-  margin-top: 0;
-  margin-bottom: -250px; /* dorong gambar ke bawah */
-  position: relative;
+  padding: 60px 20px;
+  color: #333;
 }
 
-.love-story-bottom img {
-  display: block;
-  margin: 0 auto;
-  max-width: 550px;
-  transform: translateY(20px); /* geser ke bawah */
+.penutup-overlay {
+  max-width: 650px;
+  margin: auto;
 }
+
+.penutup-frame {
+  width: 250px;
+  height: 350px;
+  margin: 0 auto 25px;
+  border-radius: 50% / 40%;  /* bikin oval melengkung */
+  overflow: hidden;
+  border: 3px solid #fff;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+.penutup-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.penutup-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.penutup-nama {
+  font-family: 'Great Vibes', cursive;
+  font-size: 36px;
+  color: #c92434; /* bisa disesuaikan warnanya */
+}
+
 
 /* ===== FOOTER ===== */
 #footer {
-  background: #b1d4aa;   /* warna footer */
+  background: #c92434;   /* warna footer */
   padding: 50px 30px;
   font-family: 'Poppins', sans-serif;
   color: #fff;           /* teks putih */

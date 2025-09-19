@@ -6,10 +6,10 @@
   function toggleMusic() {
     if (isPlaying) {
       music.pause();
-      musicBtn.innerHTML = "⏸️"; 
+      musicBtn.innerHTML = '<i class="fas fa-pause"></i>'; 
     } else {
       music.play();
-      musicBtn.innerHTML = "🎵"; 
+      musicBtn.innerHTML = '<i class="fas fa-music"></i>'; 
     }
     isPlaying = !isPlaying;
   }
@@ -30,7 +30,7 @@
 
   /* === COUNTDOWN === */
   const countdownEl = document.getElementById("countdown");
-  const weddingDate = new Date("2025-12-25 09:00:00").getTime(); 
+  const weddingDate = new Date("2025-11-14 07:00:00").getTime(); 
   setInterval(() => {
     const now = new Date().getTime();
     const distance = weddingDate - now;
@@ -60,8 +60,8 @@ function copyText(text) {
 /* === SAVE TO CALENDAR === */
 function saveToCalendar() {
   const title = "Pernikahan Arin & Yusuf ";
-  const start = "20251225T020000Z"; // 25 Des 2025, 09:00 WIB
-  const end   = "20251225T050000Z"; // 25 Des 2025, 12:00 WIB
+  const start = "20251114T000000Z"; // 14 Nov 2025, 07:00 WIB
+  const end   = "20251114T050000Z"; // 14 Nov 2025, 12:00 WIB
   const details = "Undangan pernikahan Arin & Yusuf ";
   const location = "https://maps.app.goo.gl/SudKTfmu81KAoeNU7"; // link Google Maps
 
@@ -122,7 +122,7 @@ document.getElementById("rsvpForm").addEventListener("submit", function(e) {
 
 
 
-const GET_URL = "https://script.google.com/macros/s/AKfycbzi3sbHzkfLYI1lraAJGMh0oLO-_XDua3sIWChHD-HBD0KwCbnrpR1gt9A8iRNywnNbLQ/exec"; // ganti dengan URL GET Apps Script kamu
+const GET_URL = "https://script.google.com/macros/s/AKfycbzi3sbHzkfLYI1lraAJGMh0oLO-_XDua3sIWChHD-HBD0KwCbnrpR1gt9A8iRNywnNbLQ/exec"; 
 const ucapanBody = document.getElementById("ucapanBody");
 
 function loadUcapan() {
@@ -130,17 +130,37 @@ function loadUcapan() {
     .then(res => res.json())
     .then(data => {
       ucapanBody.innerHTML = ""; // reset dulu
-      data.reverse().forEach(item => {
-        const row = document.createElement("tr");
-        row.innerHTML = `
-          <td>${item.nama}</td>
-          <td>${item.ucapan}</td>
-          <td class="ucapan-kehadiran ${item.kehadiran === "Hadir" ? "hadir" : "tidakhadir"}">
-            ${item.kehadiran}
-          </td>
-        `;
-        ucapanBody.appendChild(row);
-      });
+      let hadirCount = 0;
+      let tidakHadirCount = 0;
+
+data.reverse().forEach(item => {
+  const kehadiran = (item.kehadiran || "").trim().toLowerCase();
+
+  const row = document.createElement("div");
+  row.classList.add("ucapan-item");
+  row.innerHTML = `
+    <div class="ucapan-header">
+      <span>${item.nama}</span>
+      <span class="ucapan-kehadiran ${kehadiran.replace(" ", "")}">
+        ${item.kehadiran}
+      </span>
+    </div>
+    <div class="ucapan-teks">${item.ucapan}</div>
+  `;
+  ucapanBody.appendChild(row);
+
+  // hitung jumlah hadir / tidak hadir
+  if (kehadiran === "hadir") {
+    hadirCount++;
+  } else if (kehadiran === "tidak hadir") {
+    tidakHadirCount++;
+  }
+});
+
+
+      // update hasil ke HTML
+      document.getElementById("jumlahHadir").textContent = hadirCount;
+      document.getElementById("jumlahTidakHadir").textContent = tidakHadirCount;
     })
     .catch(err => console.error(err));
 }
