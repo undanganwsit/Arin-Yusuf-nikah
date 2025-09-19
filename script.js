@@ -168,3 +168,18 @@ data.reverse().forEach(item => {
 // otomatis load pas halaman dibuka
 document.addEventListener("DOMContentLoaded", loadUcapan);
 
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const target = document.querySelector(".love-story-bottom");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        target.classList.add("show");
+      }
+    });
+  }, { threshold: 0.2 }); // muncul kalau 20% elemen terlihat
+
+  observer.observe(target);
+});

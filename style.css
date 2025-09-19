@@ -575,7 +575,14 @@ section {
   position: absolute;
   bottom: -60px; /* keluar dari section love story */
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateY(100px); /* start lebih ke bawah */
+  opacity: 0;
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.love-story-bottom.show {
+  transform: translateX(-50%) translateY(0); /* balik ke posisi normal */
+  opacity: 1;
 }
 
 .love-story-bottom img {
