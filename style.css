@@ -634,7 +634,7 @@ section {
 
 .love-story-bottom {
   position: absolute;
-  bottom: -40px; /* keluar dari section love story */
+  bottom: -60px; /* keluar dari section love story */
   left: 50%;
   transform: translateX(-50%) translateY(100px); /* start lebih ke bawah */
   opacity: 0;
@@ -647,10 +647,10 @@ section {
 }
 
 .love-story-bottom img {
-  max-width: 1000px;
+  max-width: 600px;
   height: auto;
   display: block;
-  width: 100%; /* Ukuran bunga love story */
+  /* width: 100%;  Ukuran bunga love story */
 }
 
 /* ===== SECTION HADIAH + UCAPAN ===== */
