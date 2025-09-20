@@ -500,7 +500,7 @@ section {
   font-family: 'Great Vibes', cursive; /* contoh font script */
   font-size: 42px;
   color: #fff; /* biar kontras sama background merah */
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .section-title {
@@ -539,10 +539,42 @@ section {
 }
 
 .couple-message {
-  font-family: 'Merriweather', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 14px;
   line-height: 1.6;
     color: #fff;
+}
+
+.couple-sosmed {
+  margin-top: 12px;
+}
+
+.couple-sosmed a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #fff;    /* bulat putih */
+  color: #c92434;            /* ikon merah elegan */
+  font-size: 22px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.couple-sosmed a:hover {
+  background-color: #c92434; /* hover bulat merah */
+  color: #fff;               /* ikon jadi putih */
+}
+
+
+.couple-dengan {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  color: #fff;
+  margin-bottom: 10px;
 }
 
 
@@ -973,6 +1005,35 @@ section {
   color: #c92434; /* bisa disesuaikan warnanya */
 }
 
+/* ===== BUNGA PEMISAH DI PENUTUP ===== */
+.bunga-separator {
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  line-height: 0;
+  z-index: 5; /* di atas background tapi di bawah konten */
+}
+
+.bunga-separator img {
+  display: block;
+  margin: 0 auto;
+  max-width: 700px;
+  width: 100%;
+  height: auto;
+}
+
+/* Bunga Atas */
+.bunga-atas {
+  top: -60px; /* keluar ke atas agar nempel section hadiah/ucapan */
+}
+
+/* Bunga Bawah */
+.bunga-bawah {
+  bottom: -60px; /* keluar ke bawah agar nempel footer */
+}
+
+
 
 /* ===== FOOTER ===== */
 #footer {
@@ -1018,6 +1079,20 @@ section {
 
 .footer-right a:hover {
   text-decoration: underline; /* efek hover */
+}
+
+/* ===== Bunga Pemisah Penutup atas dan bawah ===== */
+.bunga-separator {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  line-height: 0; /* biar gak ada spasi default */
+}
+
+.bunga-separator img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
     /* === REVEAL ANIMATION === */
