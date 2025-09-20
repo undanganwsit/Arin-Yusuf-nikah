@@ -1018,7 +1018,7 @@ section {
 .bunga-separator img {
   display: block;
   margin: 0 auto;
-  max-width: auto;
+  max-width: 600px; /* samakan dengan section-divider */
   width: 100%;
   height: auto;
 }
