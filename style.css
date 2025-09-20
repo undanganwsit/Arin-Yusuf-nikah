@@ -287,7 +287,7 @@
   top: 0%;
   left: 50%;
   transform: translate(-50%, 50%); /* mulai agak ke bawah */
-  width: auto;
+  width: 100%;
   max-width: 600px;
   opacity: 0;
   transition: all 1s ease-out; /* transisi halus */
@@ -1018,7 +1018,7 @@ section {
 .bunga-separator img {
   display: block;
   margin: 0 auto;
-  max-width: 700px;
+  max-width: 600px;
   width: 100%;
   height: auto;
 }
@@ -1079,20 +1079,6 @@ section {
 
 .footer-right a:hover {
   text-decoration: underline; /* efek hover */
-}
-
-/* ===== Bunga Pemisah Penutup atas dan bawah ===== */
-.bunga-separator {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  line-height: 0; /* biar gak ada spasi default */
-}
-
-.bunga-separator img {
-  display: block;
-  width: 100%;
-  height: auto;
 }
 
     /* === REVEAL ANIMATION === */
