@@ -287,7 +287,7 @@
   top: 0%;
   left: 50%;
   transform: translate(-50%, 50%); /* mulai agak ke bawah */
-  width: 70%;
+  width: 100%;
   max-width: 600px;
   opacity: 0;
   transition: all 1s ease-out; /* transisi halus */
@@ -481,11 +481,11 @@ section {
 }
 
 .bunga-kiri {
-  left: -60px; /* geser 60px keluar ke kiri */
+  left: -100px; /* geser 60px keluar ke kiri */
 }
 
 .bunga-kanan {
-  right: -60px; /* geser 60px keluar ke kanan */
+  right: -100px; /* geser 60px keluar ke kanan */
   transform: translateY(-50%) scaleX(-1); /* dibalik agar simetris */
 }
 
@@ -1018,7 +1018,7 @@ section {
 .bunga-separator img {
   display: block;
   margin: 0 auto;
-  max-width: 600px;
+  max-width: auto;
   width: 100%;
   height: auto;
 }
