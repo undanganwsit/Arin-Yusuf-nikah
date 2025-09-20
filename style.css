@@ -481,11 +481,11 @@ section {
 }
 
 .bunga-kiri {
-  left: -100px; /* geser 60px keluar ke kiri */
+  left: -50px; /* geser 60px keluar ke kiri */
 }
 
 .bunga-kanan {
-  right: -100px; /* geser 60px keluar ke kanan */
+  right: -50px; /* geser 60px keluar ke kanan */
   transform: translateY(-50%) scaleX(-1); /* dibalik agar simetris */
 }
 
@@ -650,6 +650,7 @@ section {
   max-width: 600px;
   height: auto;
   display: block;
+  width: 100%;
 }
 
 /* ===== SECTION HADIAH + UCAPAN ===== */
