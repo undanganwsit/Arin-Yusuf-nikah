@@ -107,49 +107,54 @@
   animation: rotateFrame 20s linear infinite;
 }
 
-/* Nama pengantin */
+/* Container utama */
 .bride-groom {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: #c92434;
   z-index: 2;
+  color: #c92434;
 }
 
-.text-wrapper {
-  position: absolute;
-  top: 50%;                 /* pusat vertikal */
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  z-index: 3;
-  display: flex;
-  flex-direction: column;   /* urut atas-bawah */
-  align-items: center;
-}
-
+/* The Wedding Of */
 .wedding-title {
   font-family: 'Playfair Display', serif;
   font-size: 14px;
   letter-spacing: 2px;
   color: #555;
-  margin-bottom: 10px;      /* jarak ke nama Arin */
+  margin-bottom: 15px;
 }
 
+/* Bungkus nama */
+.names-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px; /* jarak antar elemen */
+  position: relative;
+}
+
+/* Nama */
 .name {
-  font-family: 'Great Vibes', cursive;
-  font-size: 48px;
-  color: #c92434;           /* warna hijau lembut */
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  color: #c92434;
+  z-index: 2;
 }
 
+/* Simbol & besar dekoratif */
 .and {
   font-family: 'Great Vibes', cursive;
-  font-size: 18px;
-  text-transform: uppercase;
-  margin: 1px 0;
-  color: #555;
+  font-size: 120px;             /* gede dekorasi */
+  color: rgba(201,36,52,0.15);  /* merah samar */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  pointer-events: none;
 }
 
 /* Animasi */
