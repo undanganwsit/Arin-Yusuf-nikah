@@ -274,6 +274,9 @@
   margin: 0 auto;
 }
 
+
+
+
 /* ===== BUNGA PEMISAH ===== */
 .section-divider {
   position: relative;
@@ -288,7 +291,7 @@
   left: 50%;
   transform: translate(-50%, 50%); /* mulai agak ke bawah */
   width: 100%; /* Ukuran bunga pemisah */
-  max-width: 600px;
+  max-width: 650px;
   opacity: 0;
   transition: all 1s ease-out; /* transisi halus */
 }
@@ -297,6 +300,9 @@
   transform: translate(-50%, -50%); /* naik ke tengah */
   opacity: 1;
 }
+
+
+
 
 /* ===== SECTION ACARA ===== */
 #acara {
@@ -1019,7 +1025,7 @@ section {
 .bunga-separator img {
   display: block;
   margin: 0 auto;
-  max-width: 600px; /* samakan dengan section-divider */
+  max-width: 650px; /* samakan dengan section-divider */
   width: 100%;
   height: auto;
 }
