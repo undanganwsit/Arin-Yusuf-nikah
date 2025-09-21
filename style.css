@@ -296,7 +296,7 @@
   left: 50%;
   transform: translate(-50%, 50%); /* mulai agak ke bawah */
   width: 100%; /* Ukuran bunga pemisah */
-  max-width: 650px;
+  max-width: 700px;
   opacity: 0;
   transition: all 1s ease-out; /* transisi halus */
 }
@@ -1030,7 +1030,7 @@ section {
 .bunga-separator img {
   display: block;
   margin: 0 auto;
-  max-width: 650px; /* samakan dengan section-divider */
+  max-width: 700px; /* samakan dengan section-divider */
   width: 100%;
   height: auto;
 }
