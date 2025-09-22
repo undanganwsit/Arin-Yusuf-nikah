@@ -75,7 +75,7 @@
   color: #ffff;
   margin: 5px 0 0 0;     /* kasih jarak rapat ke atas (5px aja) */
     display: inline-block; /* biar lebarnya ikut teks */
-  white-space: nowrap;   /* cegah teks turun baris */
+  white-space: normal;   /* cegah teks turun baris */
 }
 
     .btn {
